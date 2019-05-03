@@ -7,7 +7,7 @@ pipeline {
         echo "Hello"
       }
     }
-    stage("Evaluate branches") {
+    stage("Evaluate Master") {
       when {
 	branch "master"
       }
@@ -15,6 +15,8 @@ pipeline {
         echo "World"
         echo "Heal it"
       }
+    }
+     stage ("Evaluate Dev"){
 
       when{
 	branch "Dev"
@@ -22,6 +24,8 @@ pipeline {
 	steps {
 	  echo "Hello Dev!!"
 	}
+      }
+      stage ("Evaluate Test"){
 	when{
 	  branch "Test"
 	}
