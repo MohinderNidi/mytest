@@ -12,8 +12,7 @@ pipeline {
 	branch "master"
       }
       steps {
-        echo "World"
-        echo "Heal it"
+        echo "Hello Master!!"
       }
     }
      stage ("Evaluate Dev"){
